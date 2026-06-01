@@ -1,0 +1,27 @@
+{
+  "name": "exvora-telegram-bot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Exvora Telegram Mini App + Main bot + Notify bot (Aurex & WoodCoin style)",
+  "packageManager": "pnpm@9.15.0+",
+  "scripts": {
+    "dev": "echo 'Запусти в двух терминалах:\\n  cd bot && pnpm dev\\n  cd webapp && pnpm dev'",
+    "build": "pnpm -r build",
+    "start": "cd bot && pnpm start",
+    "lint": "pnpm -r lint",
+    "install:all": "pnpm install",
+    "clean": "pnpm -r clean && rm -rf node_modules"
+  },
+  "keywords": [
+    "telegram",
+    "mini-app",
+    "grammY",
+    "exvora",
+    "crypto",
+    "exchange",
+    "woodcoin",
+    "aurex"
+  ],
+  "author": "Exvora Tech",
+  "license": "MIT"
+}
