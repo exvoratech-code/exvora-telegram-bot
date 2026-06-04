@@ -1,0 +1,22 @@
+services:
+  - type: worker
+    name: exvora-bot
+    env: node
+    region: frankfurt
+    plan: free
+    buildCommand: cd bot && pnpm install && pnpm run build
+    startCommand: cd bot && npm run start:prod
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: exvora-db
+          property: connectionString
+    autoDeploy: true
+
+databases:
+  - name: exvora-db
+    plan: free
+    region: frankfurt
+    postgresMajorVersion: 16
